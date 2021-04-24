@@ -174,7 +174,6 @@ function assertDFA() {
     for (let k = 0, n = ranges.length; k < n; k++) {
       const t = charMove[ranges[k]];
       if (t.length !== 1) {
-        K.log(charMove);
         throw new Error(
           `DFA Assertion Fail!\nFrom state \`${fromStates[i]}\` via charset \`${ranges[k]}\` can goto to multi states!`,
         );
@@ -244,7 +243,6 @@ function input(s, startIndex, _debug) {
         }
         if (t.action) stack = t.action(stack, c, startIndex, fromState, s) || stack;
         lastIndex = t.eMove ? lastIndex : startIndex;
-        _debug && K.log(`${c}:${fromState}>${t.to}`);
         if (j === n - 1) {
           startIndex += advanceIndex;
           fromState = t.to;

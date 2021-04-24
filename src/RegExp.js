@@ -390,7 +390,6 @@ var NFABuilders = (function _() {
     }
   }
 
-  // console.log(K.locals(_));
   return {
     assert,
     choice,

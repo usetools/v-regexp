@@ -127,15 +127,15 @@ let G_DEBUG;
   tree:Array      // AST Tree Stack
 }
 */
-function parse(re, _debug) {
-  G_DEBUG = _debug;
+function parse(re) {
+  G_DEBUG = false;
 
   const parser = getNFAParser();
 
   let ret;
   let stack;
   let lastState;
-  ret = parser.input(re, 0, _debug);
+  ret = parser.input(re, 0, G_DEBUG);
   stack = ret.stack;
 
   stack = actions.endChoice(stack); // e.g. /a|b/
@@ -806,8 +806,6 @@ var actions = (function _() {
       return _isRecursive(n, stack._parentGroup._parentStack);
     }
   }
-
-  // console.log(K.locals(_));
 
   return {
     escapeStart,

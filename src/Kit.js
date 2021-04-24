@@ -1,7 +1,4 @@
 /* Kit */
-
-const AP = Array.prototype;
-const { slice } = AP;
 const isBrowser = (function (_this) {
   return _this?.toString() === '[object Window]';
 })(window);
@@ -389,31 +386,6 @@ function repeats(s, n) {
   return new Array(n + 1).join(s);
 }
 
-function log() {
-  // eslint-disable-next-line prefer-rest-params
-  const a = slice.call(arguments);
-  if (isBrowser) {
-    // eslint-disable-next-line no-console
-    Function.prototype.apply.apply(console.log, [console, a]);
-  } else {
-    // Assume it is Node.js
-    const s = 'util';
-    // eslint-disable-next-line
-    const util = require(s); // skip require.js
-    a.forEach((x) => {
-      // eslint-disable-next-line no-console
-      console.log(
-        util.inspect(x, {
-          showHidden: false,
-          customInspect: true,
-          depth: 64,
-          colors: true,
-        }),
-      );
-    });
-  }
-}
-
 function locals(f) {
   const src = f.toString();
   const re = /^\s+function\s+([a-zA-Z]\w+)\s*\(/gm;
@@ -444,7 +416,6 @@ export default {
   succ,
   toPrint,
   flatten2,
-  log,
   isBrowser,
   locals,
 };
