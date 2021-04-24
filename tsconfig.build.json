@@ -11,6 +11,7 @@
       "@v-regexp": ["./src"],
       "@v-regexp/*": ["./src/*"],
     },
+    "declaration": true,
     "importHelpers": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./src",

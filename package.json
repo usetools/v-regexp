@@ -24,7 +24,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "cd site && webpack serve --mode development --config webpack.config.js",
-    "build:umd": "webpack --mode production --progress",
+    "build:umd": "rm -rf dist && webpack --mode production --progress",
     "build:lib": "rm -rf lib && npx tsc -b tsconfig.build.json",
     "build:esm": "rm -rf es && npx tsc -p tsconfig.build.json -m es2015 --outDir es",
     "build": "npm run build:umd && npm run build:lib && npm run build:esm",

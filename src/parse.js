@@ -91,7 +91,7 @@ AST:
 
 */
 
-function AST(a) {
+export function AST(a) {
   this.raw = a.raw;
   this.tree = a.tree;
   this.groupCount = a.groupCount;

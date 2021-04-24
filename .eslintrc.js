@@ -41,5 +41,6 @@ module.exports = {
     'no-prototype-builtins': 'off',
     'prefer-destructuring': 'off',
     semi: 'error',
+    'spaced-comment': 'off',
   },
 };

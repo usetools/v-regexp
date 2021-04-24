@@ -1,5 +1,8 @@
 import { RaphaelElement } from 'raphael';
 
+/**
+ * 主题
+ */
 export interface Theme {
   nodeFontSize?: number;
   labelFontSize?: number;
@@ -10,7 +13,9 @@ export interface Theme {
   highlightColor?: HighlightColor;
   textAnchor?: string;
   fontWeight?: string | number;
-  // 可视化图形，横轴线
+  /**
+   * 可视化图形，横轴线
+   **/
   line: {
     stroke: string;
     strokeWidth: number;
@@ -23,11 +28,15 @@ export interface Theme {
   endPoint: {
     fill: string;
   };
-  // 精确匹配
+  /**
+   * 精确匹配
+   **/
   exact: {
     bgColor: string;
   };
-  // /./ 任意字符匹配
+  /**
+   * /./ 任意字符匹配
+   **/
   dot: {
     bgColor: string;
     textColor: string;
@@ -46,7 +55,9 @@ export interface Theme {
     labelMargin: number;
     strokeWidth: 2;
     max: {
-      // 贪婪模式 线条
+      /**
+       * 贪婪模式 线条
+       **/
       greedy: {
         stroke: string;
       };
@@ -55,7 +66,9 @@ export interface Theme {
       };
     };
     min: {
-      // 贪婪模式 线条
+      /**
+       * 贪婪模式 线条
+       **/
       greedy: {
         stroke: string;
       };
@@ -74,7 +87,9 @@ export interface Theme {
       bgColor: string;
       textColor: string;
     };
-    // 字符集类别
+    /**
+     * 字符集类别
+     **/
     class: {
       bgColor: string;
       textColor: string;
@@ -83,11 +98,17 @@ export interface Theme {
       bgColor: string;
       textColor: string;
     };
-    // 字符集合，背景盒子
+    /**
+     * 字符集合，背景盒子
+     **/
     boxColor: {
-      // 不包含 [^]
+      /**
+       * 不包含 [^]
+       **/
       exclude: string;
-      // 包含 []
+      /**
+       * 包含 []
+       **/
       include: string;
     };
     labelColor: {
@@ -100,44 +121,60 @@ export interface Theme {
     lineColor: string;
     strokeWidth: number;
   };
-  // 边界
+  /**
+   * 边界
+   **/
   assert: {
     rect: {
       strokeWidth: number;
       radius: number;
     };
-    // 匹配非单词边界 \B
+    /**
+     * 匹配非单词边界 \B
+     **/
     nonWordBoundary: {
       bgColor: string;
       textColor: string;
     };
-    // 匹配一个单词边界 \b
+    /**
+     * 匹配一个单词边界 \b
+     **/
     wordBoundary: {
       bgColor: string;
       textColor: string;
     };
-    // 结尾 $
+    /**
+     * 结尾 $
+     **/
     end: {
       bgColor: string;
       textColor: string;
     };
-    // 开头 ^
+    /**
+     * 开头 ^
+     **/
     begin: {
       bgColor: string;
       textColor: string;
     };
-    // (?=pattern) 匹配后跟随 pattern
+    /**
+     * (?=pattern) 匹配后跟随 pattern
+     **/
     lookahead: {
       lineColor: string;
       textColor: string;
     };
-    // (?!pattern) 匹配后不跟随 pattern
+    /**
+     * (?!pattern) 匹配后不跟随 pattern
+     **/
     negativeLookahead: {
       lineColor: string;
       textColor: string;
     };
   };
-  // 全局变量
+  /**
+   * 全局变量
+   **/
   global?: Global;
 }
 
@@ -146,7 +183,9 @@ export interface Global {
   templateText?: RaphaelElement;
 }
 
-// 图形顶部，显示正则表达式，字符串高亮语法
+/**
+ * 图形顶部，显示正则表达式，字符串高亮语法
+ **/
 export interface HighlightColor {
   delimiter?: string;
   flags?: string;
