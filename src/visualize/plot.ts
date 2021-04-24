@@ -1,5 +1,5 @@
 import { AssertLookahead, AssertNegativeLookahead } from '../constants';
-import { PlotNodeParams, PlotParams } from '../types/visualize/element';
+import { PlotNodeParams, PlotParams } from '../types';
 import { elideOK, onlyCharClass, plural, translate } from './common';
 import { hline, point, smoothLine, textLabel, textRect } from './element';
 

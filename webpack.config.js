@@ -10,8 +10,9 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename,
-    library: 'v-regexp',
+    library: 'vregexp',
     libraryTarget: 'umd',
+    clean: true,
   },
   module: {
     rules: [

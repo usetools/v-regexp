@@ -1,6 +1,5 @@
 import raphael, { RaphaelPaper } from 'raphael';
-import { VisualizeParams } from '@v-regexp/types/visualize';
-import { Theme } from '@v-regexp/types/theme';
+import { VisualizeParams, Theme } from '../types';
 import themes from '../themes';
 import { getCharSize, getHighlightText, getTemplateText, translate } from './common';
 import { highlight } from './highlight';

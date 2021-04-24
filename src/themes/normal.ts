@@ -1,4 +1,4 @@
-import { Theme } from '../types/theme';
+import { Theme } from '../types';
 
 /**
  * 常规主题

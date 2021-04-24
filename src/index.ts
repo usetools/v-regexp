@@ -6,6 +6,7 @@ import visualize from './visualize';
 import themes from './themes';
 import * as download from './download';
 
+export * from './types';
 export * from './constants';
 export default {
   Kit,

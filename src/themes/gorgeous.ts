@@ -3,7 +3,7 @@
  * 华丽、花哨、女性化
  * */
 
-import { Theme } from '../types/theme';
+import { Theme } from '../types';
 
 /**
  * 常规主题

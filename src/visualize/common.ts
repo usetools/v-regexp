@@ -2,14 +2,14 @@
  * 通用方法
  */
 import { RaphaelElement, RaphaelPaper } from 'raphael';
-import { Theme } from '../types/theme';
 import {
+  Theme,
   GetCharSizeParams,
   CharSizeCache,
   CharSizeCacheItem,
   HighlightText,
   GetHighlightTextParams,
-} from '../types/visualize';
+} from '../types';
 import { EMPTY_NODE, GROUP_NODE, CHOICE_NODE } from '../constants';
 import K from '../Kit';
 

@@ -2,11 +2,17 @@
   "name": "v-regexp",
   "version": "1.0.0",
   "description": "JavaScript Regular Expression Parser and Visualizer.",
-  "main": "index",
+  "main": "dist/v-regexp.min.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yorkyu/v-regexp.git"
+    "url": "https://github.com/usetools/v-regexp"
   },
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "README.md"
+  ],
   "keywords": [
     "Regular Expression",
     "RegExp",
@@ -18,7 +24,10 @@
   "license": "MIT",
   "scripts": {
     "serve": "cd site && webpack serve --mode development --config webpack.config.js",
-    "build": "webpack --mode production --progress",
+    "build:umd": "webpack --mode production --progress",
+    "build:lib": "rm -rf lib && npx tsc -b tsconfig.build.json",
+    "build:esm": "rm -rf es && npx tsc -p tsconfig.build.json -m es2015 --outDir es",
+    "build": "npm run build:umd && npm run build:lib && npm run build:esm",
     "lint": "eslint ./src --max-warnings 0 --ext .ts,.tsx,.js --fix"
   },
   "husky": {

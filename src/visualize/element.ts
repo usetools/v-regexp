@@ -12,7 +12,7 @@ import {
   PointResult,
   ElementSmoothLine,
   ElementHline,
-} from '../types/visualize/element';
+} from '../types';
 import { getCharSize } from './common';
 
 export function textRect({ str, x, y, bgColor, textColor, theme }: TextRectParams): TextRectResult {
