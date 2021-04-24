@@ -2,7 +2,7 @@
   "name": "v-regexp",
   "version": "1.0.0",
   "description": "JavaScript Regular Expression Parser and Visualizer.",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/usetools/v-regexp"
